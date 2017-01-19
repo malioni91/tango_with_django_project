@@ -1,5 +1,5 @@
 # tango_with_django_project
-First 10 chapter of Tango with Django for assesment
+First 10 chapters of Tango with Django for assesment
 
 ## Requirements
 Python 2.7.12
