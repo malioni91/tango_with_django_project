@@ -18,8 +18,8 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
 
-    def __unicode__(self):
-        return str(self.name)
+        def __unicode__(self):
+            return str(self.name)
 
 
 class Page(models.Model):
