@@ -19,9 +19,6 @@ def index(request):
     page_list = Page.objects.order_by('-views')[:5]
     context_dict = {'categories': category_list, 'pages': page_list}
 
-    # Obtain our Response object early so we can add cookie information.
-    response = render(request, 'rango/index.html', context_dict)
-
     # Call function to handle the cookies
     visitor_cookie_handler(request)
 
@@ -38,6 +35,7 @@ def get_server_side_cookie(request, cookie, default_val=None):
     if not val:
         val = default_val
     return val
+
 
 def visitor_cookie_handler(request):
     # Get the number of visits to the site.
@@ -146,7 +144,14 @@ def add_page(request, category_name_slug):
 
 
 def about(request):
-    return render(request, 'rango/about.html')
+
+    if request.session.test_cookie_worked():
+        print("TEST COOKIE WORKED!")
+        request.session.delete_test_cookie()
+
+    # Render response
+    response = render(request, 'rango/about.html', {})
+    return response
 
 
 def register(request):
