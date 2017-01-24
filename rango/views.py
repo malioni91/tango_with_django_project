@@ -195,7 +195,7 @@ def register(request):
                 # Now we save the USerProfile model instance
                 profile.save()
 
-                # Update our variable to indicate that the template
+                # Update our variable to indicate that the templateus
                 # registration was successful.
                 registered = True
         else:

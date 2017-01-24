@@ -36,8 +36,8 @@ def populate():
         {"title": "Flask",
          "url": "http://flask.pocoo.org", "views": 6}]
 
-    cats = {"Python": {"pages": python_pages, "views": 128, "likes": 32},
-        "Django": {"pages": django_pages, "views": 42, "likes": 32},
+    cats = {"Python": {"pages": python_pages, "views": 128, "likes": 64},
+        "Django": {"pages": django_pages, "views": 64, "likes": 32},
         "Other Frameworks": {"pages": other_pages, "views": 32, "likes": 16}}
 
     # The code below goes through the cats dictionary, then adds each category,
