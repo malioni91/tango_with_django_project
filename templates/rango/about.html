@@ -18,6 +18,8 @@
 {#</html>#}
 
 {% extends 'rango/base.html' %}
+{% load staticfiles %}
+
 {% block title_block %}
     About
 {% endblock %}
@@ -29,6 +31,6 @@
      </div>
     <div>
     <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of Cat" />
-    <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
     </div>
+    <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
 {% endblock %}
